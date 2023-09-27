@@ -4,11 +4,11 @@ Add META Title/Description in Wordpress without the Yoast bloat. Simple, clean U
 
 ![alt text](https://github.com/seowner/fast-meta/blob/main/preview.jpg?raw=true)
 
-# BACKUP YOUR DATABASE
+# Backup Your Database
 
 Please backup your database before doing this process. I've migrated many sites and never had a problem, but I'm not responsible if something happens to your site.
 
-# READ CAREFULLY
+# Migrating from Yoast
 
 To use the Migration plugin you <strong>MUST</strong> leave Yoast enabled until the migration is complete. The plugin uses some of Yoast's functions to do the migration.
 
@@ -23,6 +23,22 @@ Process of migrating from Yoast:
 7) Check your posts/pages/tax (backend and frontend) to make sure everything worked.
 8) Click on any admin page and watch how much faster it is - maybe even your frontend too ;)
 
+# Breadcrumbs
+
+To use breadcrumbs, go to the settings page, click enable, and add this to your theme files where you want them to be displayed.
+
+```
+<?php
+if ( function_exists('fast_breadcrumb') ) {
+  fast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+}
+?>
+```
+
 I don't intend on doing any form of support for this. I use it on all of my sites, and it works great... but results may vary.
 
-Let me know what you think <a href="https://twitter.com/tehseowner" target="_blank">@tehseowner</a>
+# Links
+
+Follow me on Twitter/X at <a href="https://twitter.com/tehseowner" target="_blank">@tehseowner</a>
+
+Check out my other plugins on <a href="https://www.ocscripts.com/" target="_blank">OCScripts.com</a>

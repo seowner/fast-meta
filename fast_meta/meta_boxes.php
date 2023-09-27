@@ -279,6 +279,7 @@ add_action('admin_init', 'add_custom_meta_box_to_taxonomy');
 function addMetaScript() {
 ?>
 <script>
+
 jQuery(document).ready(function($) {
 
     $('#custom-meta-title, #custom-meta-description').on('keyup', function() {
@@ -301,34 +302,36 @@ jQuery(document).ready(function($) {
         }
 
 	// Check and update the character count based on the ID
-	if (id === 'custom-meta-title') {
-		var titleLength = text.length;
-		$("#meta-title-count").text(titleLength);
+    if (id === 'custom-meta-title') {
+        var titleLength = text.length;
+        $("#meta-title-count").text(titleLength);
 
-		if (titleLength > 60) {
-			$("#meta-title-count").css('color', '#B22222');
-		} else {
-			$("#meta-title-count").css('color', ''); // default color
-		}
-	$('.preview_meta_title').text(text);
-	} else if (id === 'custom-meta-description') {
-		var descriptionLength = text.length;
-		$("#meta-des-count").text(descriptionLength);
+        if (titleLength > 60) {
+            $("#meta-title-count").css('color', '#B22222');
+        } else {
+            $("#meta-title-count").css('color', ''); // default color
+        }
+        $('.preview_meta_title').text(text);  // This line updates the title preview
+    } 
+    else if (id === 'custom-meta-description') {
+        var descriptionLength = text.length;
+        $("#meta-des-count").text(descriptionLength);
 
-		if (descriptionLength > 160) {
-			$("#meta-des-count").css('color', '#B22222');
-		} else {
-			$("#meta-des-count").css('color', ''); // default color
-		}
-	}
-
-
+        if (descriptionLength > 160) {
+            $("#meta-des-count").css('color', '#B22222');
+        } else {
+            $("#meta-des-count").css('color', ''); // default color
+        }
+        
         var placeholderText = 'Please provide a meta description by editing the snippet below. If you don’t, Google will try to find a relevant part of your post to show in the search results.';
         if (text.trim() !== '') {
-            $('.preview_meta_description').text(text);
+            $('.preview_meta_description').text(text);  // This line updates the description preview
         } else {
             $('.preview_meta_description').text(placeholderText);
         }
+    }
+
+
     }
 
     // Run the update function for both inputs upon page load
@@ -340,6 +343,7 @@ jQuery(document).ready(function($) {
         $("#publish").click();
     });
 });
+
 </script>
 <?php
 }

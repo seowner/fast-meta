@@ -4,11 +4,11 @@ Add META Title/Description in Wordpress without the Yoast bloat. Simple, clean U
 
 ![alt text](https://github.com/seowner/fast-meta/blob/main/preview.jpg?raw=true)
 
-# Backup Your Database
-
-Please backup your database before doing this process. I've migrated many sites and never had a problem, but I'm not responsible if something happens to your site.
+If you're <strong>not migrating</strong> from Yoast, disregard the steps below, just install and activate.
 
 # Migrating from Yoast
+
+Please backup your database before doing this process. I've migrated many sites and never had a problem, but I'm not responsible if something happens to your site.
 
 To use the Migration plugin you <strong>MUST</strong> leave Yoast enabled until the migration is complete. The plugin uses some of Yoast's functions to do the migration.
 

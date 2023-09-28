@@ -3,7 +3,7 @@
  * Plugin Name: Fast Meta Migration
  * Description: Migrate metadata from Yoast SEO plugin to Fast Meta plugin
  * Version: 1.0
- * Author: Your Name
+ * Author: @tehseowner
  */
 
 if (!defined('ABSPATH')) exit;

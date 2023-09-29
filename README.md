@@ -17,7 +17,7 @@ Process of migrating from Yoast:
 1) <strong>Backup your database please.</strong>
 2) Make sure Yoast is still enabled.
 3) Install Fast META & Migration plugin.
-4) Activate Migration pugin and go to the admin page, click button and wait until it finishes.
+4) Activate Migration plugin and go to the admin page, click button and wait until it finishes.
 5) Disable Yoast.
 6) Disable Migration plugin and remove it.
 7) Check your posts/pages/tax (backend and frontend) to make sure everything worked.
